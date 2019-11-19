@@ -1,0 +1,44 @@
+body {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+pre {
+    margin: 0;
+}
+
+h5 {
+    color: blue;
+    font-size: 24px;
+    animation: blinker 0.5s linear infinite; // sourced from: https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3
+}
+
+.phone-home {
+    display: block; 
+    width: 175px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $main-gold;
+    color: black;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.phone-home:hover {
+    opacity: 50%;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}

@@ -1,0 +1,120 @@
+@import '_vars';
+@import 'modules/_navbar';
+@import 'modules/_users';
+@import 'modules/_lightbox';
+
+@import 'modules/errors'; // error page
+
+main {
+    margin: 0 auto;
+    //width: 1280px;
+    color: $main-color;
+    background-color: $body-bg;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    color: $main-color;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blueDivider
+{
+	display: block;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	height: 7px;
+	width: 248px;
+	background-color: $main-blue;
+}
+
+.goldDivider
+{
+	display: block;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	height: 7px;
+	width: 248px;
+	background-color: $main-gold;
+}
+
+.header-logo {
+    display: block;
+    width: 75px;
+    margin-left: 45px;
+    position: relative;
+}
+
+.header-logo:hover {
+    cursor: pointer;
+}
+
+.header-nav {
+    background-color: $main-blue;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.header-nav h1 {
+    margin-left: 45px;
+    font-size: 24px;
+    color: white;
+}
+
+h1, h2 { color: $heading-color; }
+
+p { 
+    color: $body-color; 
+    //margin-left: 45px;
+}
+
+.panel { min-height: 80vh; }
+
+.panel:nth-child(odd) {
+    background-color: $temp-img;
+    color: white;
+}
+
+.panel {
+    background: url("../public/images/cap_temp.jpg") fixed no-repeat;
+    background-position: center;
+}
+
+#section1 h1 {
+    padding-top: 450px;
+    font-size: 50px;
+    margin: 0;
+    margin-left: 45px;
+}
+
+#section3 {
+    text-align: center;
+    margin-right: 45px;
+}
+
+#section3 h1 {
+    font-size: 30px;
+}
+
+#section3 h4 {
+    font-size: 16px;
+}
+
+#section3 p {
+    margin-left: 45px;
+}
+
+#to-top { position: fixed; bottom: 10px; right: 10px; display: none; }
+
+@media screen and (min-width: 900px) {
+    
+}
+
+@media screen and (min-width: 350px) {
+
+}
+
+@import 'modules/_footer'

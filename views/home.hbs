@@ -1,0 +1,60 @@
+<section id="section1" class="panel hero">
+    <div class="bio-info">
+        <h1 class="p-name">The Chronicles of Riddick</h1>
+    </div>
+
+</section>
+{{!-- <section id="section2" class="panel">panel 2</section> --}}
+<section id="section3" class="panel">
+    <h1 class="user-panel-heading">
+        An Introduction to Alec Riddick's Brain
+    </h1>
+
+    <hr class="goldDivider">
+
+    <p>
+        While Alec is known for his design skills and less for his coding ability, there are things that he likes doing outside of class. Despite never playing sports competitively as a child or even being competitive in many aspects, he enjoys different sports and video games that push him to become competitive in order to improve. Alec uses the following Favourite Things as metaphors for life and often returns to them in order to improve focus or mental clarity. Or to just throw around some heavy stuff, shoot some guys online, and get away from society. You can pick which is which.
+    </p>
+
+    <h4>Below you can see three of Alec's favourite things and the date which he started participating in the sport or got his first memorable experience.
+        <br>
+        Click on the buttons below to read more about each activity!
+    </h4>
+
+    <hr class="blueDivider">
+
+    <div class="team">
+        <!-- loop through all our team members and put their info on the page -->
+
+        {{#each people}}
+        <div class="user-panel">
+            <img src="images/{{avatar}}" alt="avatar" class="u-avatar">
+            
+            <a href="{{ID}}" class="u-link">
+                Read More
+            </a>
+
+            <h1>{{Name}}</h1>
+            <h3>{{StartDate}}</h3>
+
+        </div>
+
+        {{/each}}
+        
+    </div>
+    </div>
+
+    <!-- this will be filled in on the client side when we render our AJAX data -->
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img src="" alt="larger bio image">
+        </div>
+
+        <div class="lb-content">
+            <!-- render the database content here -->
+
+
+        </div>
+    </section>
+</section>

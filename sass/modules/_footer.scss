@@ -1,0 +1,23 @@
+footer { 
+    background-color: black;
+    color: $footer-text-color;
+    text-align: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 75px;
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li { 
+        display: inline;
+        
+        a { text-decoration: none; }
+    }
+
+}

@@ -1,0 +1,44 @@
+.team { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .user-panel {
+        flex: 0 1 200px;
+        text-align: center;
+        padding: 8px;
+
+        .u-avatar { max-width: 200px; }
+
+        .u-link { 
+            display: block; 
+            width: 100px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 auto;
+            border-radius: 3px;
+            background-color: $main-gold;
+            color: black;
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        h1, h3 { margin: 5px 0; }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .team {
+        .user-panel { 
+            flex: 1 1;
+
+            .u-avatar { max-width: 300px; }
+        }
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+}
+
