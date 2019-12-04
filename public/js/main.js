@@ -3,7 +3,8 @@
 const myVM = (() => {
     // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),
-        lightBox = document.querySelector('.lightbox');
+        lightBox = document.querySelector('.lightbox'),
+        //backToTop = document.getElementById('#to-top');
 
         //create the achievements media list
         function renderAchievements(media) {
@@ -51,9 +52,18 @@ const myVM = (() => {
             });
     }
 
+    // window.onscroll = function() {scrollFunction()};
+
+    // function scrollFunction() {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //       backToTop.style.display = "block";
+    //     } else {
+    //       backToTop.style.display = "none";
+    //     }
+    //   }
+
     userButtons.forEach(button => button.addEventListener("click", getUserData));
 
-    //wire up the lightbox close button
     lightBox.querySelector('.close').addEventListener("click", function() {
         lightBox.classList.remove('show-lb');
     });

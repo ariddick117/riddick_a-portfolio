@@ -5,9 +5,14 @@
 
 @import 'modules/errors'; // error page
 
+// Basic Styling
+.hidden {
+    display: none;
+}
+
 main {
     margin: 0 auto;
-    //width: 1280px;
+    //width: 320px;
     color: $main-color;
     background-color: $body-bg;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +30,7 @@ body {
 	display: block;
 	margin-top: 35px;
 	margin-bottom: 35px;
-	height: 7px;
+	height: 3px;
 	width: 248px;
 	background-color: $main-blue;
 }
@@ -35,15 +40,16 @@ body {
 	display: block;
 	margin-top: 35px;
 	margin-bottom: 35px;
-	height: 7px;
-	width: 248px;
+	height: 3px;
+	width: 150px;
 	background-color: $main-gold;
 }
 
+// header styling
 .header-logo {
     display: block;
-    width: 75px;
-    margin-left: 45px;
+    width: 125px;
+    margin-left: 80px;
     position: relative;
 }
 
@@ -51,27 +57,9 @@ body {
     cursor: pointer;
 }
 
-.header-nav {
-    background-color: $main-blue;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    display: flex;
-}
+// section styling
 
-.header-nav h1 {
-    margin-left: 45px;
-    font-size: 24px;
-    color: white;
-}
-
-h1, h2 { color: $heading-color; }
-
-p { 
-    color: $body-color; 
-    //margin-left: 45px;
-}
-
-.panel { min-height: 80vh; }
+// .panel { min-height: 80vh; }
 
 .panel:nth-child(odd) {
     background-color: $temp-img;
@@ -83,37 +71,161 @@ p {
     background-position: center;
 }
 
-#section1 h1 {
-    padding-top: 450px;
-    font-size: 50px;
+.angled-divide {
+    //width: 100vw;
+    position: relative;
+    padding-top: 35px;
+}
+
+// section title styling
+.section-title {
+    //margin-top: 35px;
+    color: white;
+}
+
+.section-title h1 {
+    font-size: 48px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+.section-title h4 {
+    font-size: 30px;
+    font-style: italic;
     margin: 0;
-    margin-left: 45px;
 }
 
-#section3 {
-    text-align: center;
-    margin-right: 45px;
+// section 1 (hero)
+.hero {
+    height: 100vh;
+    // width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#section3 h1 {
+.hero-sub {
+    margin: 0;
     font-size: 30px;
 }
 
-#section3 h4 {
-    font-size: 16px;
+.hero-title {
+    margin-top: 5px;
+    margin: 0;
+    font-size: 135px;
+    color: $main-gold;
 }
 
-#section3 p {
-    margin-left: 45px;
+// section 2 (about)
+#column-p {
+    display: flex;
+    justify-content: center;
 }
 
-#to-top { position: fixed; bottom: 10px; right: 10px; display: none; }
+p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: $body-color;
+    margin-left: 80px;
+}
+
+.left p {
+    margin-right: 0;
+}
+
+// section 3 (skillset)
+.skillset {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.counter-circle {
+    font-style: italic;
+    min-width: 400px;
+}
+
+// section 4 (portfolio)
+#section4 {
+    text-align: center;
+}
+
+p { 
+    color: $body-color;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+// section 5 (contact)
+.contact-column {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-column h3 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.contact-column div {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+p { 
+    color: $body-color;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+// section 6 (contact form)
+#section6 {
+    display: flex;
+}
+
+#section6 h1 {
+    font-size: 70px;
+    text-align: left;
+    margin-left: 80px;
+}
+
+p { 
+    color: $body-color;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#to-top { 
+    //display: none;
+    position: fixed; 
+    height: 50px;
+    width: 50px;
+    bottom: 40px;
+    margin-left: 610px;
+    background-color: $main-blue;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    border-radius: 50px;
+}
+
+// large mobile breakpoint
+@media screen and (min-width: 420px) {
+    
+}
+
+// tablet breakpoint
+@media screen and (min-width: 768px) {
+
+}
 
 @media screen and (min-width: 900px) {
     
 }
 
-@media screen and (min-width: 350px) {
+// desktop breakpoint
+@media screen and (min-width: 1024px) {
 
 }
 
