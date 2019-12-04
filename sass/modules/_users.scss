@@ -28,6 +28,18 @@
     }
 }
 
+
+
+// large mobile breakpoint
+@media screen and (min-width: 420px) {
+    
+}
+
+// tablet breakpoint
+@media screen and (min-width: 768px) {
+
+}
+
 @media screen and (min-width: 900px) {
     .team {
         .user-panel { 
@@ -38,7 +50,14 @@
     }
 }
 
-@media screen and (min-width: 350px) {
+// desktop breakpoint
+@media screen and (min-width: 1024px) {
+    .team {
+        .user-panel { 
+            flex: 1 1;
 
+            .u-avatar { max-width: 500px; }
+        }
+    }
 }
 

@@ -7,26 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- css stuff -->
-    <!-- link to reset -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    {{!-- <link rel="stylesheet" href="css/reset.css"> --}}
     <link rel="stylesheet" href="css/main.css">
-    <title>My Favourite Things: Alec Edition</title>
+
+    <title>Alec Riddick</title>
 </head>
 
 <body>
     <section class="header-nav">
-        <a href="index.html"></a><img class="header-logo" src="images/ajr_logo.png" alt="Alec Riddick's Logo"></a>
-        <h1>Alec's Favourite Things</h1>
+        <a href="index.html"></a><img class="header-logo" src="images/ajr_logo-navbar.png" alt="Alec Riddick's Logo"></a>
         <nav data-module="nav">
             <!-- nav elements must have nav-item -->
             <ul>
-                <li><a href="#" class="nav-item">Home</a></li>
-                <li><a href="/1" class="nav-item">Sailing</a></li>
-                <li><a href="/2" class="nav-item">Powerlifting</a></li>
-                <li><a href="/3" class="nav-item">Halo</a></li>
+                <li><a href="#section2" class="nav-item">About</a></li>
+                <li><a href="#section4" class="nav-item">Portfolio</a></li>
+                <li><a href="#section5" class="nav-item">Contact</a></li>
             </ul>
         </nav>
     </section>
+
+    <a id="to-top" href="#" class="nav-item">^</a>
 
     <main>
         {{{ body }}}
@@ -38,15 +39,12 @@
         <hr class="goldDivider">
 
         <ul>
-            <li><a href="#" class="nav-item">1</a></li>
-            <li><a href="/2" class="nav-item">2</a></li>
-            <li><a href="#section3" class="nav-item">3</a></li>
-            <li><a href="#section4" class="nav-item">4</a></li>
-            <li><a href="#section5" class="nav-item">5</a></li>
+            <li><a href="#" class="social-footer">Facebook</a></li>
+            <li><a href="#" class="social-footer">LinkedIn</a></li>
+            <li><a href="#" class="social-footer">Instagram</a></li>            
         </ul>
     </footer>
 
-    <a id="to-top" href="#" class="nav-item">back to top</a>
 
     <script type="module" src="js/main.js"></script>
     <script>

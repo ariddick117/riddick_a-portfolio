@@ -1,7 +1,22 @@
+.header-nav {
+    background-color: $heading-bg;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.header-nav h1 {
+    margin-left: 45px;
+    font-size: 24px;
+    color: white;
+}
+
+.header-nav {
+    position: absolute;
+}
 
 nav {
-    //background-color: $main-blue;
-    margin-left: 500px;
+    margin-left: 820px;
     text-align: right;
 
     ul {
