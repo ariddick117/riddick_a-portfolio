@@ -6,10 +6,11 @@
 
     .user-panel {
         flex: 0 1 300px;
+        flex-wrap: wrap;
         text-align: center;
         padding: 8px;
 
-        .u-avatar { max-width: 200px; }
+        .u-logo { max-width: 200px; }
 
         .u-link { 
             display: block; 
@@ -45,7 +46,7 @@
         .user-panel { 
             flex: 1 1;
 
-            .u-avatar { max-width: 300px; }
+            .u-logo { max-width: 300px; }
         }
     }
 }
@@ -55,8 +56,10 @@
     .team {
         .user-panel { 
             flex: 1 1;
+            min-width: 400px;
+            justify-content: center;
 
-            .u-avatar { max-width: 500px; }
+            .u-logo { max-width: 500px; }
         }
     }
 }

@@ -1,30 +1,29 @@
-// this is a partially revealing module pattern - just a variation on what we've already done
-
 const myVM = (() => {
-    // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),
         lightBox = document.querySelector('.lightbox');
 
-        //create the achievements media list
-        function renderAchievements(media) {
+        //create the team member list
+        function renderTeam(media) {
             return `<ul class="u-social">
                 ${media.map(item => `<li>${item}</li>`).join("")}
                     </ul>`
         }
 
-    function parseUserData(person) {
+    function parseUserData(project) {
         let targetDiv = lightBox.querySelector('.lb-content'),
             targetImg = lightBox.querySelector('img');
 
         let bioContent = `
-            <p>${person.bio}</p>
-            <h2>Notable Achievements:</h2>
-            <!-- loop thru achievements stuff here-->
-            ${renderAchievements(person.achievements)}
+            <h2>Project Information</h2>
+            <p>${project.bio}</p>
+            <h2>Team Members:</h2>
+            <!-- Team Member Names Loop -->
+            ${renderTeam(project.team)}
+            <h2>Project Photos</h2>
         `;
 
         targetDiv.innerHTML = bioContent;
-        targetImg.src = person.currentSrc;
+        targetImg.src = project.featuredImg1; // check this
 
         lightBox.classList.add('show-lb');
     }
@@ -32,12 +31,9 @@ const myVM = (() => {
     function getUserData(event) {
         event.preventDefault();
         //debugger;
-        //1,2, or 3 depending on which anchor tag you click
         let url = `/users/${this.getAttribute('href')}`,
             currentImg = this.previousElementSibling.getAttribute('src');
 
-        //this goes and tetches the database content (or an API endp)
-        //that's why it's called a fetch
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -51,6 +47,7 @@ const myVM = (() => {
             });
     }
 
+    // Counter Circles
     var circle = document.querySelector('circle');
     var radius = circle.r.baseVal.value;
     var circumference = radius * 2 * Math.PI;
