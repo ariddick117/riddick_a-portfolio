@@ -3,7 +3,7 @@
     <div class="bio-info">
         <h3 class="hero-sub">Web Designer</h3>
         <h1 class="hero-title">ALEC RIDDICK</h1>
-        <a href="#section6" class="hero-button">Let's Talk!</a>
+        <a href="#section6" class="hero-button">Let's Get Started</a>
     </div>
 </section>
 
@@ -56,6 +56,8 @@
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/art_direction.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -67,19 +69,21 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="white"
+                    stroke="red"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
                     cx="90"
                     cy="90"/>
             </svg>
-            <h3>Pokedex Completion</h3>
+            <h3>Art Direction</h3>
         </div>
         
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/front_end.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -91,19 +95,21 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="white"
+                    stroke="cyan"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
                     cx="90"
                     cy="90"/>
             </svg>
-            <h3>Pokedex Completion</h3>
+            <h3>Front-End Web Design</h3>
         </div>
         
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/back_end.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -115,19 +121,21 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="white"
+                    stroke="green"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
                     cx="90"
                     cy="90"/>
             </svg>
-            <h3>Pokedex Completion</h3>
+            <h3>Back-End Web Design</h3>
         </div>
 
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/branding.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -139,19 +147,21 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="white"
+                    stroke="yellow"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
                     cx="90"
                     cy="90"/>
             </svg>
-            <h3>Pokedex Completion</h3>
+            <h3>Branding</h3>
         </div>
 
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/idea_generation.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -163,19 +173,21 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="white"
+                    stroke="magenta"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
                     cx="90"
                     cy="90"/>
             </svg>
-            <h3>Pokedex Completion</h3>
+            <h3>Idea Generation</h3>
         </div>
 
         <div class="counter-circle">
             <h2 class="hidden">Title</h2>
             {{!-- counter cirle stuff --}}
+            <img src="images/pokedex.svg" alt="Counter Circle Icon">
+
             <input class="percentage"
                 value="80"
                 type="number"
@@ -187,7 +199,7 @@
             <svg class="progress-ring">
                 <circle
                     class="progress-ring__circle"
-                    stroke="#f5c217"
+                    stroke="#001ae6"
                     stroke-width="10"
                     fill="transparent"
                     r="85"
@@ -209,18 +221,16 @@
     </div>
 
     <div class="team">
-        <!-- loop through all our team members and put their info on the page -->
-
-        {{#each people}}
+        {{#each project}}
         <div class="user-panel">
-            <img src="images/{{avatar}}" alt="avatar" class="u-avatar">
+            <img src="images/{{Logo}}" alt="Project Logo" class="u-logo">
             
+            <h1>{{Name}}</h1>
+            <h3>{{Category}}</h3>
+
             <a href="{{ID}}" class="u-link">
                 Read More
             </a>
-
-            <h1>{{Name}}</h1>
-            <h3>{{StartDate}}</h3>
 
         </div>
 
@@ -230,19 +240,18 @@
 
     </div>
 
-    <!-- this will be filled in on the client side when we render our AJAX data -->
     <section class="lightbox">
         <span class="close">x</span>
         <div class="sidebar">
-            <img src="" alt="larger bio image">
+            <img src="" alt="Project Highlight Shot">
         </div>
 
         <div class="lb-content">
             <!-- render the database content here -->
-
-
         </div>
+
     </section>
+
     <img class="angled-divide" src="images/angled_svg_grey_left.svg" alt="decorative angled svg">
 </section>
 
@@ -284,7 +293,7 @@
             <hr class="goldDivider">
 
             <section class="reel">
-                <a href="" target="_blank"><img class="highlight" src="videos/highlight_reel.mp4" alt="Highlight Reel Link"></a>
+                <a href="video/highlight_reel.mp4" target="_blank"><img class="highlight" src="images/highlight_reel_cover.svg" alt="Highlight Reel Link"></a>
             </section>
         </div>
     </section>
