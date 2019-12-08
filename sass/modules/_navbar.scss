@@ -23,8 +23,7 @@ nav {
         margin: 0;
         padding: 0;
         
-        li 
-        { 
+        li { 
             display: flex; 
             float: left;
             padding-left: 35px;
@@ -32,10 +31,14 @@ nav {
         }
     }
 
-    a 
-    { 
+    a { 
         text-decoration: none; 
         font-weight: bold;
         color: #f5c217;
+        // scroll-behavior: smooth;
+    }
+
+    a:hover {
+        color: white;
     }
 }

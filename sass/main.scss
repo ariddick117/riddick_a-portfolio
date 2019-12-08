@@ -10,6 +10,10 @@
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     margin: 0 auto;
     //width: 320px;
@@ -57,17 +61,15 @@ body {
     cursor: pointer;
 }
 
+
 // section styling
-
-// .panel { min-height: 80vh; }
-
 .panel:nth-child(odd) {
-    background-color: $temp-img;
+    background-color: $odd-img;
     color: white;
 }
 
 .panel {
-    background: url("../public/images/cap_temp.jpg") fixed no-repeat;
+    background: url("images/cap_temp.jpg") fixed no-repeat;
     background-position: center;
 }
 
@@ -116,6 +118,19 @@ body {
     color: $main-gold;
 }
 
+.hero-button { 
+    display: block; 
+    width: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: $main-blue;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+}
+
 // section 2 (about)
 #column-p {
     display: flex;
@@ -144,6 +159,25 @@ p {
 .counter-circle {
     font-style: italic;
     min-width: 400px;
+    padding-bottom: 25px;
+}
+
+.counter-circle input {
+    display: none;
+}
+
+.progress-ring {
+    width: 190px;
+    height: 190px;
+}
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    //stroke: $main-blue;
 }
 
 // section 4 (portfolio)
@@ -169,19 +203,46 @@ p {
 }
 
 .contact-column div {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 30%;
+    max-width: 32%;
 }
 
 p { 
     color: $body-color;
     margin-left: 80px;
     margin-right: 80px;
+    font-size: 18px;
 }
+
+span {
+    color: $main-gold;
+}
+
+.social-connect {
+    width: 50px;
+    padding: 5px;
+}
+
+.reel {
+    height: 200px;
+    width: 400px;
+    background-color: $temp-stuff;
+}
+
 
 // section 6 (contact form)
 #section6 {
     display: flex;
+    justify-content: center;
+}
+
+#section6 div {
+    min-width: 45%;
+    max-width: 49%;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 #section6 h1 {
@@ -190,12 +251,49 @@ p {
     margin-left: 80px;
 }
 
+#section6 h1:hover {
+    cursor: default;
+}
+
 p { 
     color: $body-color;
     margin-left: 80px;
     margin-right: 80px;
 }
 
+.contact-form {
+	border-radius: 5px;
+	font-size: 24px;
+	font-weight: bold;
+	margin-left: 44px;
+	padding: 20px;
+}
+
+input[type=text], select, textarea {
+    width: 500px;
+	font-size: 16px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	//resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #f5c116;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+
+// to top button
 #to-top { 
     //display: none;
     position: fixed; 
@@ -208,7 +306,10 @@ p {
     text-decoration: none;
     font-size: 50px;
     border-radius: 50px;
+    // scroll-behavior: smooth;
+    z-index: 2000;
 }
+
 
 // large mobile breakpoint
 @media screen and (min-width: 420px) {

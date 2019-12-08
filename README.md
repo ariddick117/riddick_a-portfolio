@@ -40,6 +40,7 @@ Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * [README Formatting](https://guides.github.com/features/mastering-markdown/)
+* [Counter Circles](https://css-tricks.com/building-progress-ring-quickly/)
 * Trevor Van Rys
 * Joe Kormendi
 * Banglanfeng Pan
