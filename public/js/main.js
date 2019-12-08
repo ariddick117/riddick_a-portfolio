@@ -3,8 +3,7 @@
 const myVM = (() => {
     // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),
-        lightBox = document.querySelector('.lightbox'),
-        //backToTop = document.getElementById('#to-top');
+        lightBox = document.querySelector('.lightbox');
 
         //create the achievements media list
         function renderAchievements(media) {
@@ -52,18 +51,30 @@ const myVM = (() => {
             });
     }
 
-    // window.onscroll = function() {scrollFunction()};
+    var circle = document.querySelector('circle');
+    var radius = circle.r.baseVal.value;
+    var circumference = radius * 2 * Math.PI;
 
-    // function scrollFunction() {
-    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //       backToTop.style.display = "block";
-    //     } else {
-    //       backToTop.style.display = "none";
-    //     }
-    //   }
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
+
+    function setProgress(percent) {
+        const offset = circumference - percent / 100 * circumference;
+        circle.style.strokeDashoffset = offset;
+    }   
+
+    const input = document.querySelector('input');
+    setProgress(input.value);
+
+    input.addEventListener('change', function(e) {
+        if (input.value < 101 && input.value > -1) {
+            setProgress(input.value);
+        }  
+    })
 
     userButtons.forEach(button => button.addEventListener("click", getUserData));
 
+    //wire up the lightbox close button
     lightBox.querySelector('.close').addEventListener("click", function() {
         lightBox.classList.remove('show-lb');
     });
