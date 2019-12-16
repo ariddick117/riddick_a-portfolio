@@ -1,10 +1,10 @@
 {
-  "name": "testmodules",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "using classes with node and express",
+  "description": "Final Portfolio Design",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "node",
     "javascript"
   ],
-  "author": "TVR",
+  "author": "AJR",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
