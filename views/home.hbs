@@ -220,13 +220,17 @@
         <hr class="goldDivider">
     </div>
 
-    <div class="team">
+    <div class="team flip-container">
         {{#each project}}
-        <div class="user-panel">
-            <img src="images/{{Logo}}" alt="Project Logo" class="u-logo">
-            
-            <h1>{{Name}}</h1>
-            <h3>{{Category}}</h3>
+        <div class="user-panel"> 
+            <div class="flipper">
+                <img src="images/{{Logo}}" alt="Project Logo" class="u-logo front">
+
+                <div class="back">
+                    <h1>{{Name}}</h1>
+                    <h3>{{Category}}</h3>
+                </div>
+            </div>
 
             <a href="{{ID}}" class="u-link">
                 Read More
@@ -243,7 +247,7 @@
     <section class="lightbox">
         <span class="close">x</span>
         <div class="sidebar">
-            <img src="" alt="Project Highlight Shot">
+            <img src="" alt="Project Icon">
         </div>
 
         <div class="lb-content">
@@ -268,9 +272,9 @@
             <h3>TALK</h3>
             <hr class="goldDivider">
             <p>
-                Phone: <span>519.477.4885</span>
+                Phone: <span id="contact-span">519.477.4885</span>
                 <br>
-                Email: <span>alec.riddick@gmail.com</span>
+                Email: <span id="contact-span">alec.riddick@gmail.com</span>
             </p>
         </div>
 

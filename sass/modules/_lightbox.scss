@@ -9,8 +9,7 @@
     z-index: 5000;
     padding: 20px;
 
-    background-color: rgba(0, 0, 0, 0.85);
-    
+    background-color: rgba(0, 0, 0, 0.85);    
 
     .sidebar {
         flex: 1;
@@ -20,9 +19,14 @@
         flex: 3;
         text-align: left;
         margin-left: 25px;
+        font-size: 8px;
     }
 
-    img { max-width: 350px; }
+    img { max-width: 150px; }
+
+    span {
+        color: $main-blue;
+    }
 
     .close {    
         right: 24px;
@@ -43,5 +47,76 @@
     li { 
         display: inline-block;
         padding: 10px;
+    }
+}
+
+// large mobile breakpoint
+@media screen and (min-width: 420px) {
+    
+}
+
+// tablet breakpoint
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 900px) {
+    .team {
+        .user-panel { 
+            flex: 1 1;
+
+            .u-logo { max-width: 300px; }
+        }
+    }
+}
+
+// desktop breakpoint
+@media screen and (min-width: 1024px) {
+    .lightbox { 
+        padding: 20px;
+    
+        background-color: rgba(0, 0, 0, 0.85);
+        
+    
+        .sidebar {
+            flex: 1;
+        }
+        
+        .lb-content {
+            flex: 3;
+            text-align: left;
+            margin-left: 25px;
+        }
+    
+        // .lb-content h2 {
+        //     color: $main-blue;
+        // }
+    
+        img { max-width: 350px; }
+    
+        span {
+            color: $main-blue;
+        }
+    
+        .close {    
+            right: 24px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 2em;
+            position: fixed;
+            border: thin solid white;
+            padding: 2px 14px 5px;
+            border-radius: 50%;
+            background-color: $main-gold;
+        }
+    }
+    
+    .show-lb { display: flex !important; }
+    
+    .u-social {
+        li { 
+            display: inline-block;
+            padding: 10px;
+        }
     }
 }

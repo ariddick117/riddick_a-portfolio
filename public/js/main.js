@@ -20,10 +20,15 @@ const myVM = (() => {
             <!-- Team Member Names Loop -->
             ${renderTeam(project.team)}
             <h2>Project Photos</h2>
+            <img src="images/${project.featuredImg1}" alt="">
+            <img src="images/${project.featuredImg2}" alt="">
+            <img src="images/${project.featuredImg3}" alt="">
+            <img src="images/${project.featuredImg4}" alt="">
+            <h2><a href="images/${project.projectLink}" target="_blank">View Project</a></h2>
         `;
 
         targetDiv.innerHTML = bioContent;
-        targetImg.src = project.featuredImg1; // check this
+        targetImg.src = project.currentSrc; // check this
 
         lightBox.classList.add('show-lb');
     }
@@ -68,6 +73,7 @@ const myVM = (() => {
             setProgress(input.value);
         }  
     })
+    
 
     userButtons.forEach(button => button.addEventListener("click", getUserData));
 
